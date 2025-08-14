@@ -1,0 +1,17 @@
+name: Build and Push Docker Image
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Log in to Docker Hub
+        run: echo P@ssw0rd9o0p | docker login -u ihorl0352 --password-stdin
+      - name: Build Docker image
+        run: docker build -t ihorl0352/social-media-posting:latest .
+      - name: Push Docker image
+        run: docker push ihorl0352/social-media-posting:latest
