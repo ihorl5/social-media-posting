@@ -10,7 +10,7 @@ RUN apk add --no-cache \
     curl \
     git \
     yt-dlp \
-    && pip3 install --no-cache-dir awscli
+    aws-cli
 
 # Optional: place your watermark
 # COPY watermark.png /data/watermark.png
