@@ -8,13 +8,13 @@ ARG AWS_DEFAULT_REGION
 
 # FFmpeg + Python + pip + yt-dlp + AWS CLI
 RUN apk add --no-cache \
-    # ffmpeg \
-    # python3 \
-    # py3-pip \
-    # ca-certificates \
-    # curl \
-    # git \
-    # yt-dlp \
+    ffmpeg \
+    python3 \
+    py3-pip \
+    ca-certificates \
+    curl \
+    git \
+    yt-dlp \
     aws-cli
 
 # Optional: place your watermark
