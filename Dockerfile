@@ -13,6 +13,7 @@ RUN apk add --no-cache \
     aws-cli
 
 RUN npm install -g twelvelabs-js
+RUN pip install --no-cache-dir twelvelabs
 
 # Optional: place your watermark
 # COPY watermark.png /data/watermark.png
