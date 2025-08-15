@@ -12,12 +12,14 @@ RUN apk add --no-cache \
     yt-dlp \
     aws-cli
 
-RUN npm install -g twelvelabs-js
-RUN pip install --no-cache-dir twelvelabs
+
 
 # Optional: place your watermark
 # COPY watermark.png /data/watermark.png
 
 USER node
+
+RUN npm install twelvelabs-js axios fs
+
 ENV N8N_PORT=3000
 EXPOSE 3000
