@@ -3,6 +3,7 @@ version: "3.8"
 services:
   n8n:
     build: .
+    image: n8n-social-media
     container_name: n8n-social-media
     ports:
       - "5678:3000"
@@ -15,6 +16,9 @@ services:
       - N8N_BASIC_AUTH_USER=user
       - N8N_BASIC_AUTH_PASSWORD=pass
       - N8N_ENABLE_EXECUTE_COMMAND=true
+      - NODE_FUNCTION_ALLOW_BUILTIN=*
+      - NODE_FUNCTION_ALLOW_EXTERNAL=*
+
     volumes:
       - n8n_data:/home/node/.n8n
       - ./data:/data

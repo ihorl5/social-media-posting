@@ -13,12 +13,7 @@ RUN apk add --no-cache \
     aws-cli
 
 
-
-# Optional: place your watermark
-# COPY watermark.png /data/watermark.png
-
-WORKDIR /data
-RUN npm install twelvelabs-js axios
+RUN npm install -g twelvelabs-js
 
 USER node
 
