@@ -12,6 +12,8 @@ RUN apk add --no-cache \
     yt-dlp \
     aws-cli
 
+RUN npm install -g twelvelabs-js
+
 # Optional: place your watermark
 # COPY watermark.png /data/watermark.png
 
