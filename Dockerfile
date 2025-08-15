@@ -17,9 +17,10 @@ RUN apk add --no-cache \
 # Optional: place your watermark
 # COPY watermark.png /data/watermark.png
 
-USER node
+WORKDIR /data
+RUN npm install twelvelabs-js axios
 
-RUN npm install twelvelabs-js axios fs
+USER node
 
 ENV N8N_PORT=3000
 EXPOSE 3000
